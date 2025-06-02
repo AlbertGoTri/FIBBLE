@@ -68,6 +68,11 @@ To generate the documentation, run:
 ```bash
 javadoc -d docs -sourcepath FONTS/src -subpackages domain:persistence:presentation
 ```
+
+## 👨‍💻 Authors
+
+This project was developed by a team of undergraduate students at **UPC** as part of the **PROP (Programming Projects)** course during the **Spring 2024–2025** semester.
+
 ---
 
 Feel free to fork, explore, and build upon our implementation!
