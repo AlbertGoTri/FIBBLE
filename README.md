@@ -32,13 +32,13 @@ FIBBLE/
 │       ├── persistence/      # Persistence layer
 │       └── presentation/     # UI and interaction
 │
-├── docs/                     # Javadoc-generated documentation (if applicable)
+├── docs/                     # Javadoc-generated documentation (optional)
 └── README.md
 ```
 
 ## 🚀 Running the Project
 
-1. **Make sure you have Java 17 or higher installed.**
+1. **Make sure you have Java 21 or higher installed.**
 
 2. **Navigate to the `/FONTS` directory in your terminal:**
    ```bash
@@ -54,7 +54,7 @@ FIBBLE/
 
 ## 📖 Documentation
 
-All classes and public methods are documented with **Javadoc**.
+All classes and public methods are documented using **Javadoc**.
 To generate the documentation, run:
 
 ```bash
