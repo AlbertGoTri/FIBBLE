@@ -26,13 +26,21 @@ FIBBLE includes a fully functional **Graphical User Interface (GUI)** built with
 FIBBLE/
 │
 ├── FONTS/
-│   ├── launch_main.sh        # Launch script for the application
+│   ├── launch_main.sh         # Launch script for the application
 │   └── src/
-│       ├── domain/           # Domain logic
-│       ├── persistence/      # Persistence layer
-│       └── presentation/     # UI and interaction
+│       ├── domain/            # Domain logic
+│       ├── persistence/       # Persistence layer
+│       ├── presentation/      # UI and interaction
+│       ├── saves/             # Saved games
+│       ├── resources/         # Game resources (dictionaries, .png, etc)
+│       ├── data_persistencia/
+│       │   └── usuarios/      # Saved users
+│       └── presentation/      # UI and interaction
 │
-├── docs/                     # Javadoc-generated documentation (optional)
+│
+├── DOCS/                      # User manual and test cases
+├── EXE/                       # Executable of the project (.jar)
+├── javadoc/                   # Javadoc generated documentation.
 └── README.md
 ```
 
@@ -60,11 +68,6 @@ To generate the documentation, run:
 ```bash
 javadoc -d docs -sourcepath FONTS/src -subpackages domain:persistence:presentation
 ```
-
-## 👨‍💻 Authors
-
-This project was developed by a team of undergraduate students at **UPC** as part of the **PROP (Programming Projects)** course during the **Spring 2024–2025** semester.
-
 ---
 
 Feel free to fork, explore, and build upon our implementation!
