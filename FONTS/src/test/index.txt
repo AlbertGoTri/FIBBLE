@@ -1,0 +1,2 @@
+java: contiene el código fuente de los tests
+resources: contiene los recursos usados (diccionarios, puntuaciones, etc)

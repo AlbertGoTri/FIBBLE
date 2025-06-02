@@ -1,0 +1,19 @@
+{
+  "username": "5",
+  "password": "5",
+  "estadisticas": {
+    "totalPoints": 0,
+    "avgPoints": 0.0,
+    "maxPoints": 0,
+    "num_matches": 0,
+    "wins": 0,
+    "loses": 0,
+    "winRate": 0.0,
+    "totalWords": 0
+  },
+  "gamePoints": 0,
+  "winner": false,
+  "numWordsGame": 0,
+  "fichas_usuario": [],
+  "esRobot": false
+}

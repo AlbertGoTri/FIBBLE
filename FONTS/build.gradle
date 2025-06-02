@@ -1,0 +1,79 @@
+/* ---------- plugins y versión de Java ---------- */
+plugins {
+    id 'java'
+    id 'application'
+    //añado esta línea para el gson:
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+/* ---------- repos y dependencias ---------- */
+repositories { mavenCentral() }
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'com.google.code.gson:gson:2.8.9'
+}
+
+/* ---------- clase principal ---------- */
+application {
+    // nombre COMPLETO de la clase con el método main
+    mainClass = 'dominio.Main'
+}
+
+/* ---------- dónde están los fuentes y los recursos ---------- */
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']        // sigue valiendo toda la carpeta raíz
+            exclude 'test/**'        // ← NO compiles nada bajo src/test/
+        }
+        resources.srcDirs = ['src/resources']
+    }
+    test {
+        java.srcDirs      = ['src/test/java']
+        resources.srcDirs = ['src/test/resources']
+    }
+}
+
+/* ---------- incluir recursos duplicados si los hubiera ---------- */
+tasks.processResources {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
+/* ---------- JAR ejecutable principal ---------- */
+tasks.jar {
+    manifest {
+        attributes 'Main-Class': application.mainClass
+    }
+    // nombre bonito del fichero resultante
+    archiveBaseName = 'PROP_SCRABBLE'
+}
+
+/* ---------- JARs independientes para los drivers ---------- */
+task jarDriverDominio(type: Jar, dependsOn: classes) {
+    archiveBaseName = 'DriverControladorDeDominio'
+    manifest { attributes 'Main-Class': 'dominio.drivers.DriverControladorDeDominio' }
+    from sourceSets.main.output
+}
+
+task jarDriverPartida(type: Jar, dependsOn: classes) {
+    archiveBaseName = 'DriverControladorPartida'
+    manifest { attributes 'Main-Class': 'dominio.drivers.DriverControladorPartida' }
+    from sourceSets.main.output
+}
+
+task jarDriverUsuario(type: Jar, dependsOn: classes) {
+    archiveBaseName = 'DriverControladorUsuario'
+    manifest { attributes 'Main-Class': 'dominio.drivers.DriverControladorUsuario' }
+    from sourceSets.main.output
+}
+
+/* ---------- tarea comodín para compilar los tres drivers ---------- */
+task buildAllDrivers(dependsOn: [
+        jarDriverDominio,
+        jarDriverPartida,
+        jarDriverUsuario
+]) {
+    group       = 'build'
+    description = 'Compila los tres drivers en JARs separados'
+}

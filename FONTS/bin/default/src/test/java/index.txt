@@ -1,0 +1,15 @@
+TestAlgoritmo: comprueba que funcione el algoritmo.
+TestDiccionario: comprueba las funciones del diccionario.
+TestEstadistica: comprueba que se guarden las estadisticas.
+TestHumano: comprueba las funciones del jugador humano.
+TestMovimiento: comprueba que los movimientos sean validos.
+TestPartida: comprueba el funcionamiento de la partida.
+TestRanking: comprueba que el ranking se actualice bien.
+TestReglamento: comprueba que se apliquen las reglas.
+TestRobot: comprueba las jugadas del robot.
+TestSaco: comprueba que el saco funcione bien.
+TestTablero: comprueba las funciones del tablero.
+TestUsuario: comprueba la gestion de los usuarios.
+TestVista: comprueba que la vista funcione bien.
+TestJuegoGeneralExpandido.java: Test general del juego
+TestJuegoGeneralUltra.java: Test general del juego

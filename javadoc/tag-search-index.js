@@ -1,0 +1,1 @@
+tagSearchIndex = [{"l":"Características principales:","h":"class dominio.Saco","d":"Section","u":"dominio/Saco.html#caracter-sticas-principales--heading"},{"l":"Convenciones","h":"class dominio.ControladorPartida","d":"Section","u":"dominio/ControladorPartida.html#convenciones-heading"},{"l":"Serialized Form","h":"","u":"serialized-form.html"}];updateSearchResults();
